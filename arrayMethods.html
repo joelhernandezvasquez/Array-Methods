@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+    
+</head>
+
+
+<body>
+
+<script>
+
+
+const people = [
+  {name: 'Zell'},
+  {name: 'Vincy'},
+  {name: 'Casper'}
+];
+
+// Exercise You want to know the position of the person named Casper in the people array. 
+//To do so, you can use Array.findIndex and check if the name property in each object matches Casper.
+
+// 1 Version
+
+let CasperIndex;
+people.forEach(person => 
+{
+    if(person.name ==="Casper")
+      CasperIndex = person.name;
+})
+
+//alert(CasperIndex);
+
+// 2 version and the best find index
+const casperIndex = people.findIndex(person => person.name=='Casper');
+
+//alert(casperIndex);
+
+// version 3
+
+const caspersito = people.find(person => person.name=="Casper");
+//alert(caspersito);
+
+
+// FILTER METHOD
+
+//const numbers = [1, 12, 4, 18, 9, 7, 11, 3, 50, 5, 6];
+
+//const biggerThan10 = numbers.filter(num => num > 10);
+//alert(biggerThan10);
+
+// 
+
+const numbersArray = [1, 12, 4, 18, 9, 7, 11, 3, 50, 5, 6];
+const numbersMultiplyby5 = numbersArray.map(num => num * 5);
+
+//alert(numbersMultiplyby5);
+
+const todos = ['buy eggs', 'feed my cat', 'water plants'];
+const newList = todos.map(todo=> `I need to ${todo} `);
+//alert(newList);
+
+//For example, let's say you want have a list of numbers. 
+//You want to multiply each number by five. After the multiplication, you want to get a list of numbers that are between 30 and 40.
+
+const numbers = [1, 12, 4, 18, 9, 7, 11, 3, 50, 5, 6];
+const numbersMultyply = numbers.map(num=> num * 5);
+const numbersBetween30_40 = numbersMultyply.filter(num=> num > 29 && num <41);
+alert(numbersBetween30_40);
+
+
+</script>
+
+</body>
+
+
+</html>

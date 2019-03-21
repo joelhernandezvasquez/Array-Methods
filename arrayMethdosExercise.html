@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+
+    <!-- Complete these exercises with the following data:
+    1 - Find the index of Thomas Edison.
+    2 - Find the object that contains Winston Churchill.
+    3 - Create an array that contains people that died before 1940.
+    4 - Create an array that contains people that are alive between 1850 and 1970.
+    5 - Create an array that contains the firstName, lastName and yearsLived for each person (where yearsLived is the number of years the person lived).
+    6 - Get the total number of yearsLived of the people who were alive between 1750 and 1900. -->
+
+    <script>
+    const people = [
+  { firstName: 'Benjamin', lastName: 'Franklin', yearBorn: 1706, yearOfDeath: 1790 },
+  { firstName: 'Thomas', lastName: 'Edison', yearBorn: 1847, yearOfDeath: 1931 },
+  { firstName: 'Franklin', lastName: 'Roosevelt', yearBorn: 1882, yearOfDeath: 1945 },
+  { firstName: 'Napolean', lastName: 'Bonaparte', yearBorn: 1769, yearOfDeath: 1821 },
+  { firstName: 'Abraham', lastName: 'Lincoln', yearBorn: 1809, yearOfDeath: 1865 },
+  { firstName: 'Mahatma', lastName: 'Gandhi', yearBorn: 1869, yearOfDeath: 1948 },
+  { firstName: 'Winston', lastName: 'Churchill', yearBorn: 1874, yearOfDeath: 1965 },
+  { firstName: 'Charles', lastName: 'Darwin', yearBorn: 1809, yearOfDeath: 1882 },
+  { firstName: 'Albert', lastName: 'Einstein', yearBorn: 1879, yearOfDeath: 1955 },
+  { firstName: 'Pablo', lastName: 'Picasso', yearBorn: 1881, yearOfDeath: 1973 },
+  { firstName: 'Ludwig', lastName: 'Beethoven', yearBorn: 1770, yearOfDeath: 1827 },
+  { firstName: 'Walt', lastName: 'Disney', yearBorn: 1901, yearOfDeath: 1966 },
+  { firstName: 'Henry', lastName: 'Ford', yearBorn: 1863, yearOfDeath: 1947 },
+  { firstName: 'Steve', lastName: 'Jobs', yearBorn: 1955, yearOfDeath: 2012 }
+]
+
+// 1 - Find the index of Thomas Edison.
+
+const tomasIndex = people.findIndex(person => person.firstName=="Thomas");
+console.log(tomasIndex);
+
+// 2 - Find the object that contains Winston Churchill.
+
+const WinstonObject = people.find(person => person.firstName=="Winston" && person.lastName=="Churchill");
+console.log(WinstonObject);
+
+// 3 - Create an array that contains people that died before 1940.
+
+const deathPeople = people.filter(person => person.yearOfDeath < 1940);
+console.log(deathPeople);
+
+
+// 4 - Create an array that contains people that are alive between 1850 and 1970.
+
+const alivePeople = people.filter(person => person.yearBorn >=1850 && person.yearOfDeath <=1970);
+console.log(alivePeople);
+
+// 5 - Create an array that contains the firstName, lastName and yearsLived 
+// for each person (where yearsLived is the number of years the person lived).
+
+const peopleYearsLived = people.map(person => `${person.firstName} ${person.lastName} years lived:${person.yearOfDeath - person.yearBorn}`);
+console.log(peopleYearsLived);
+
+
+// 6 - Get the total number of yearsLived of the people who were alive between 1750 and 1900.
+
+const peopleYears = people.filter(person => person.yearBorn >=1750 && person.yearOfDeath <=1990).map(person => `${person.firstName} ${person.lastName} years lived:${person.yearOfDeath - person.yearBorn}`);
+console.log(peopleYears);
+
+
+
+</script>
+
+</body>
+
+
+</html>
