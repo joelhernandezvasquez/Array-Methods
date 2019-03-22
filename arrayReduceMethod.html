@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+     <script>
+
+// get the total of the numbers
+
+    const numbers = [10, 20, 30, 40 , 50];
+
+    // Traditional way
+     let total = 0;
+      numbers.forEach(number => total += number);
+      console.log(total);
+
+      // Using Reduce method
+      const total2 = numbers.reduce((accumulator,currentValue)=> accumulator + currentValue );
+    console.log(total2);
+
+
+    // Getting the average of the number by using reduce method
+
+    const average = numbers.reduce((accumulator,currentValue,index,array)=>
+    {
+       accumulator+=currentValue;
+
+       if(index != array.length-1)
+         return accumulator;
+    else
+      return accumulator / array.length;
+        
+    });
+
+    console.log(average);
+
+   
+
+
+
+   </script>
+
+</body>
+
+
+</html>

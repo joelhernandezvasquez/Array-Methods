@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+    
+    const perfumeCost = 
+    {
+      blueSeduction:25,
+      blackSeduction:23,
+      kingSeduction:30,
+      powerSeduction:28
+
+    };
+
+   // Converting an object into an array and only getting the properties out of the object
+    const arrayofPerfume = Object.keys(perfumeCost);
+    console.log(arrayofPerfume);
+
+     // Converting an object into an array and only getting the values out of the object
+
+    const perfumePrice = Object.values(perfumeCost);
+    console.log(perfumePrice);
+
+      // Converting an object into an array and  getting the properties and the values out of the object
+
+      const perfume = Object.entries(arrayofPerfume);
+      console.log(perfume);
+      
+    
+    </script>
+</body>
+
+</html>
